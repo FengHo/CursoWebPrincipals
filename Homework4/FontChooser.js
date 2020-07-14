@@ -1,3 +1,6 @@
+const COLOR_BLACK = "black";
+const COLOR_RED = "red";
+
 class FontChooser extends React.Component {
 
     constructor(props) {
@@ -18,9 +21,9 @@ class FontChooser extends React.Component {
             min = "1";
         }
 
-        if(localStorage.textSize) {
+        if(localStorage.textSize)
             size = localStorage.textSize;
-        } else {
+        else {
             size = props.size;
             localStorage.textSize = size;
         }
@@ -28,19 +31,19 @@ class FontChooser extends React.Component {
         if(localStorage.color)
             color = localStorage.color;
         else {
-            color = "black"
+            color = COLOR_BLACK
             localStorage.color = color;
         }
 
         if(Number(size) >= Number(max)) {
             size = max;
             localStorage.textSize = max;
-            color = "red"
+            color = COLOR_RED
             localStorage.color = color;
         } else if(Number(size) <= Number(min)) {
             size = min;
             localStorage.textSize = min;
-            color = "red"
+            color = COLOR_RED
             localStorage.color = color;
         }
 
@@ -55,17 +58,15 @@ class FontChooser extends React.Component {
             else
                 bold = true;
 
-
             localStorage.isItBold = bold.toString();
         }
 
-        if(Number(size) >= Number(max)) {
+        localStorage.initSize = props.size;
+
+        if(Number(props.size) >= Number(max))
             localStorage.initSize = max;
-        } else if(Number(size) <= Number(min)) {
+        else if(Number(props.size) <= Number(min))
             localStorage.initSize = min;
-        } else {
-            localStorage.initSize = props.size;
-        }
 
         console.log(size);
 
@@ -98,22 +99,20 @@ class FontChooser extends React.Component {
             localStorage.isItBold = 'false';
         else
             localStorage.isItBold = 'true';
-
-        console.log(localStorage.isItBold);
     }
 
     decreaseFontSize(){
-        if(this.state.size === this.state.minValue) {
+        if(this.state.size === this.state.minValue)
             this.setState({size: this.state.minValue});
-        } else {
+        else {
             localStorage.textSize = (this.state.size - 1).toString();
             this.setState({size: (this.state.size - 1).toString()});
-            this.setState({color: "black"});
-            localStorage.color = "black";
+            this.setState({color: COLOR_BLACK});
+            localStorage.color = COLOR_BLACK;
 
             if((Number(this.state.size) - 1).toString()  === this.state.minValue) {
-                this.setState({color: "red"});
-                localStorage.color = "red";
+                this.setState({color: COLOR_RED});
+                localStorage.color = COLOR_RED;
             }
         }
     }
@@ -121,16 +120,16 @@ class FontChooser extends React.Component {
     increaseFontSize(){
         if(this.state.size === this.state.maxValue) {
             this.setState({size: this.state.maxValue});
-            this.setState({color: "red"});
+            this.setState({color: COLOR_RED});
         } else {
             localStorage.textSize = (Number(this.state.size) + 1).toString();
             this.setState({size: (Number(this.state.size) + 1).toString()});
-            this.setState({color: "black"});
-            localStorage.color = "black";
+            this.setState({color: COLOR_BLACK});
+            localStorage.color = COLOR_BLACK;
 
             if((Number(this.state.size) + 1).toString() === this.state.maxValue) {
-                this.setState({color: "red"});
-                localStorage.color = "red";
+                this.setState({color: COLOR_RED});
+                localStorage.color = COLOR_RED;
             }
         }
     }
@@ -138,12 +137,13 @@ class FontChooser extends React.Component {
     resetFontSize(){
         this.setState({size: localStorage.initSize});
         localStorage.textSize = localStorage.initSize;
+        this.setState({color:COLOR_BLACK});
+
         if(localStorage.textSize === this.state.maxValue
         || localStorage.textSize === this.state.minValue) {
-            this.state.color = "red";
-            localStorage.color = "red";
+            this.setState({color:COLOR_RED});
+            localStorage.color = COLOR_RED;
         }
-        console.log(localStorage.textSize)
     }
 
     render() {
