@@ -1,0 +1,28 @@
+{
+  "Animal": {
+    "name": "Jóse",
+    "species": "Bird",
+    "breed": "Cockatiel",
+    "gender": "male",
+    "traits": "funny",
+    "age": 2
+  },
+  "Animal": {
+    "name": "Maria",
+    "species": "Bird",
+    "breed": "Cockatoo",
+    "gender": "female",
+    "traits": "kind",
+    "age": 3
+  },
+  "Toy": {
+    "id": "1",
+    "name": "Rope Ball",
+    "price": 25
+  },
+  "Toy": {
+    "id": "2",
+    "name": "Roller coaster",
+    "price": 40
+  }
+}

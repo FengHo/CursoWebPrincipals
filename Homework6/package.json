@@ -1,0 +1,24 @@
+{
+  "name": "homework6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "SET NODE_ENV=dev && node index.js",
+    "test": "mocha index.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai-http": "^4.3.0",
+    "encoding": "^0.1.13",
+    "express": "^4.17.1",
+    "mocha-prepare": "^0.1.0",
+    "mongoose": "^5.9.24"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "mongo-unit": "^2.0.1"
+  }
+}
