@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
     "encoding": "^0.1.13",
     "express": "^4.17.1",
     "mocha-prepare": "^0.1.0",

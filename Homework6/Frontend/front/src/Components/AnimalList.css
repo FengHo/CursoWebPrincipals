@@ -1,0 +1,21 @@
+.list-item {
+    width: 100%;
+    min-height: 100px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.list {
+    margin-top:1%;
+    margin-bottom: 1%;
+    width: 100%;
+    min-height: 720px;
+}
+
+.item-image{
+    width:10%;
+}

@@ -1,0 +1,17 @@
+.container {
+    min-height: 720px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.container-item {
+    width: 250px;
+    height: 300px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px ;
+}
+
