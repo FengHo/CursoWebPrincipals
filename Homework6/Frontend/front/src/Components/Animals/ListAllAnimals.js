@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Card, ListGroup} from 'react-bootstrap';
-import './AnimalList.css'
+import '../List.css'
 
 export default class ListAllAnimals extends Component {
     constructor() {

@@ -1,7 +1,6 @@
 import React, {Fragment} from 'react';
-import './App.css';
-import Router from "./Components/Router";
-import {Footer} from "./Components/Footer";
+import Router from "./Components/Routes/Router";
+import {Footer} from "./Components/Layout/Footer";
 
 function App() {
   return (

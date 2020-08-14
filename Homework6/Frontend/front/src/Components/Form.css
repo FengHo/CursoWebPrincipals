@@ -22,3 +22,8 @@
 .button{
     width: 40%;
 }
+
+.background-animal {
+    background-image: url('../Assets/sneaky-elbow-h00rqvO5A-M-unsplash.jpg');
+    background-size: cover;
+}

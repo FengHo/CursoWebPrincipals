@@ -15,3 +15,8 @@
     margin-top: 10px ;
 }
 
+.background-home {
+    background-image: url('../../Assets/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg');
+    background-size: cover;
+}
+
