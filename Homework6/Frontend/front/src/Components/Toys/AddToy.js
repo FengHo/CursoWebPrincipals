@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import {Button, Card, Form} from "react-bootstrap";
 import '../Form.css'
 import Alerts from "../Alerts/Alerts";

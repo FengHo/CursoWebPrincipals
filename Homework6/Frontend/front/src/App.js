@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import Router from "./Components/Routes/Router";
 import {Footer} from "./Components/Layout/Footer";
 
-function App() {
+const App = () => {
   return (
       <Fragment>
           <Router></Router>
